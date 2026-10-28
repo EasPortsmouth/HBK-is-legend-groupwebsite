@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b10">
+    <meta name="description" content="Arhivski zapis o Operaciji Mia: Prva fronta, skupinskem konfliktu v zgodovini HBK is legend.">
+    <title>Operacija Mia: Prva fronta | HBK is legend</title>
+    <style>
+        :root {
+            --bg: #0b0b10;
+            --panel: #14141d;
+            --panel-soft: #101019;
+            --text: #f4f4f8;
+            --muted: #a4a4b8;
+            --accent: #b9a0ff;
+            --border: #302b46;
+            --line: #393052;
+            --success: #b7f0c0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+        body {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at 50% 0%, #282044 0%, transparent 48%), var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { width: min(1120px, 92%); margin: auto; }
+        header { border-bottom: 1px solid var(--border); background: #0b0b10dd; }
+        nav { min-height: 68px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .logo { color: var(--text); font-size: 1.02rem; font-weight: 850; letter-spacing: 1.2px; white-space: nowrap; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; flex-wrap: wrap; gap: 18px; color: var(--muted); font-size: .86rem; }
+        .nav-links a { color: inherit; }
+        .nav-links a:hover { color: var(--accent); }
+        .hero { position: relative; overflow: hidden; margin: 24px 0 22px; padding: 44px 34px 38px; border: 1px solid var(--border); border-radius: 14px; background: linear-gradient(105deg, #171321 0%, #171321ed 47%, #22173b 100%); }
+        .hero::after { content: "✦"; position: absolute; right: 6%; top: -40px; font-size: 13rem; line-height: 1; color: #b9a0ff12; transform: rotate(12deg); pointer-events: none; }
+        .eyebrow { position: relative; z-index: 1; color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; }
+        h1 { position: relative; z-index: 1; margin: 8px 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -1px; }
+        .subtitle { position: relative; z-index: 1; max-width: 720px; color: #d0cce0; font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; }
+        .notice { margin-top: 22px; padding: 10px 13px; border-left: 3px solid var(--accent); background: #b9a0ff0d; color: var(--muted); font-size: .85rem; }
+        .layout { display: grid; grid-template-columns: minmax(0, 1fr) 310px; gap: 24px; align-items: start; padding-bottom: 42px; }
+        article { min-width: 0; }
+        .infobox, .sidebox { background: linear-gradient(145deg, #14141d, #101019); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+        .infobox { margin-bottom: 25px; }
+        .box-title { padding: 8px 13px; border-bottom: 1px solid var(--line); color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; font-weight: 700; }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: .87rem; }
+        th, td { padding: 10px 12px; border-right: 1px solid #302b46; border-bottom: 1px solid #302b46; text-align: left; vertical-align: top; }
+        th:last-child, td:last-child { border-right: 0; }
+        tr:last-child td { border-bottom: 0; }
+        th { color: var(--muted); font-weight: 650; background: #ffffff04; }
+        td strong { color: var(--text); }
+        .winner { color: var(--success); font-weight: 750; }
+        .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 13px; }
+        .side { border: 1px solid var(--border); border-radius: 8px; padding: 13px; background: #ffffff03; }
+        .side h3 { font-size: 1rem; margin-bottom: 7px; }
+        .side ul { padding-left: 19px; color: var(--muted); font-size: .88rem; }
+        .side.mia { border-top: 3px solid #d38e9c; }
+        .side.trick { border-top: 3px solid var(--accent); }
+        .article-section { margin: 26px 0; }
+        .article-section h2 { margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line); font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; line-height: 1.3; }
+        .article-section h3 { margin: 18px 0 6px; font-size: 1.05rem; }
+        .article-section p { margin: 0 0 12px; color: #e1deeb; }
+        .article-section ol, .article-section ul { padding-left: 25px; }
+        .article-section li { margin: 0 0 8px; padding-left: 3px; }
+        .muted { color: var(--muted); }
+        .timeline { list-style: none; padding: 14px !important; }
+        .timeline li { position: relative; margin: 0; padding: 0 0 17px 30px; border-left: 1px solid #554477; font-size: .86rem; }
+        .timeline li:last-child { padding-bottom: 0; border-left-color: transparent; }
+        .timeline li::before { content: attr(data-step); position: absolute; left: -13px; top: -2px; display: grid; place-items: center; width: 24px; height: 24px; border: 2px solid #6e55a4; border-radius: 50%; background: #201735; color: var(--accent); font-size: .7rem; font-weight: 800; }
+        .timeline strong { display: block; color: var(--text); }
+        .timeline span { display: block; margin-top: 2px; color: var(--muted); }
+        .quote { margin: 16px 0; padding: 15px 17px; border: 1px solid var(--accent); border-radius: 8px; background: #b9a0ff09; color: #ded2ff; font-family: Georgia, "Times New Roman", serif; }
+        .quote p { margin-bottom: 5px; }
+        .quote small { color: var(--muted); font-family: system-ui, sans-serif; }
+        aside { display: grid; gap: 16px; }
+        .participant { padding: 11px 13px; border-bottom: 1px solid var(--line); }
+        .participant:last-child { border-bottom: 0; }
+        .participant .role { display: block; margin-bottom: 2px; color: var(--accent); font-size: .74rem; font-weight: 750; text-transform: uppercase; letter-spacing: .7px; }
+        .participant strong { display: block; margin-bottom: 3px; }
+        .participant p { color: var(--muted); font-size: .83rem; line-height: 1.55; }
+        .sidebox ul { padding: 12px 14px 12px 32px; color: var(--muted); font-size: .86rem; }
+        .sidebox li { margin-bottom: 7px; }
+        .sidebox li:last-child { margin-bottom: 0; }
+        .related { padding: 12px 14px; display: grid; gap: 8px; font-size: .88rem; }
+        .related a::before { content: "› "; color: var(--accent); }
+        .tag { display: inline-block; margin: 2px 4px 2px 0; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: .72rem; }
+        footer { padding: 22px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: .8rem; }
+        .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
+        @media (max-width: 820px) { .layout { grid-template-columns: 1fr; } aside { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 34px 24px; } }
+        @media (max-width: 560px) { .container { width: 92%; } nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 14px 0; gap: 8px; } .nav-links { gap: 12px; font-size: .8rem; } .hero { margin-top: 16px; padding: 28px 19px; } .hero::after { right: -10px; top: 8px; font-size: 8rem; } .sides { grid-template-columns: 1fr; } aside { grid-template-columns: 1fr; } th, td { padding: 8px; font-size: .8rem; } }
+        @media print { body { background: white; color: black; } header, footer, .notice { display: none; } .hero, .infobox, .sidebox, .side { background: white; color: black; border-color: #777; } .article-section p, .muted, .side ul, .participant p { color: #222; } a { color: black; } }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="container" aria-label="Glavna navigacija">
+        <a class="logo" href="index.html">HBK <span>IS LEGEND</span></a>
+        <div class="nav-links">
+            <a href="index.html">Domov</a>
+            <a href="about.html">O skupini</a>
+            <a href="index.html#kazalo">Poglavja</a>
+            <a href="#kronologija">Kronologija</a>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="hero" aria-labelledby="page-title">
+        <div class="eyebrow">Operacija Mia · Prvo poglavje</div>
+        <h1 id="page-title">Prva fronta</h1>
+        <p class="subtitle">Konflikt v skupini HBK is legend, ki se je začel z vročim prepirom in končal z nepričakovano spremembo oblasti v skupinskem klepetu.</p>
+        <div class="notice"><strong>Opomba arhiva:</strong> Izraz »vojna« se v tem članku uporablja šaljivo za spor in odstranjevanje članov iz skupine Snapchat. Dogodki so povzeti po pripovedi udeleženca; natančen datum ni znan.</div>
+    </section>
+
+    <div class="layout">
+        <article>
+            <section class="infobox" aria-labelledby="podatki-title">
+                <h2 class="box-title" id="podatki-title">Osnovni podatki o konfliktu</h2>
+                <div class="table-wrap">
+                    <table>
+                        <tbody>
+                            <tr><th scope="row">Ime konflikta</th><td>Operacija Mia: Prva fronta</td></tr>
+                            <tr><th scope="row">Obdobje</th><td>Ni natančno znano; zgodovina skupine</td></tr>
+                            <tr><th scope="row">Lokacija</th><td>Skupinski klepet Snapchat</td></tr>
+                            <tr><th scope="row">Nasprotni strani</th><td>Mijina stran proti Trickovi strani</td></tr>
+                            <tr><th scope="row">Izid</th><td><span class="winner">Zmaga Tricka Williamsa in Cveta Vovka</span></td></tr>
+                            <tr><th scope="row">Odločilni dogodek</th><td>Odstranitev vseh treh nasprotnikov iz skupine</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sides">
+                    <div class="side mia">
+                        <h3>Leva stran: Mia</h3>
+                        <ul>
+                            <li><strong>Mia</strong> — glavna nasprotnica</li>
+                            <li><strong>Andjica</strong> — zaveznica</li>
+                            <li><strong>Neznani član</strong> — pridruženi udeleženec</li>
+                        </ul>
+                    </div>
+                    <div class="side trick">
+                        <h3>Desna stran: Trick Williams</h3>
+                        <ul>
+                            <li><strong>Trick Williams</strong> — prvotni udeleženec spora</li>
+                            <li><strong>Cveto Vovk</strong> — zaveznik in izvajalec končnega čiščenja</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="article-section" id="povzetek">
+                <h2>Pregled</h2>
+                <p><strong>Operacija Mia: Prva fronta</strong> je naziv za spor znotraj skupine Snapchat HBK is legend. Začel se je s prepirom med Trickom Williamsom in Mio, nato pa se je hitro razvil v zaporedje ponovnih dodajanj in odstranitev članov.</p>
+                <p>Ko je Mia iz skupine odstranila Tricka, ga je Cveto Vovk dvakrat poskusil vrniti. Po drugem poskusu je Mia odstranila še Cveta. Trick je nato Cveta znova dodal, Cveto pa se je odzval z odstranitvijo Mie. Mijina zaveznica Andjica je poskusila obnoviti prvotno stanje, vendar je Cveto po obvestilu odstranil Mio, Andjico in še neznanega člana. S tem se je konflikt končal.</p>
+            </section>
+
+            <section class="article-section" id="povod">
+                <h2>Povod</h2>
+                <p>Začetni povod je bil vroč prepir med Trickom Williamsom in Mio. Vsebina spora v arhivu ni podrobno dokumentirana, zato njegovih razlogov ni mogoče zanesljivo rekonstruirati. Znano pa je, da se je prepir končal tako, da je Mia Tricka odstranila iz skupine.</p>
+                <p>Ta odločitev je sprožila neposredno posredovanje Cveta Vovka. Kar bi lahko ostalo pri običajnem sporu med dvema članoma, je tako postalo širši boj za nadzor nad tem, kdo sme ostati v skupinskem klepetu.</p>
+            </section>
+
+            <section class="article-section" id="potek">
+                <h2>Potek konflikta</h2>
+                <ol>
+                    <li><strong>Prva odstranitev:</strong> Po prepiru Mia odstrani Tricka Williamsa iz skupine.</li>
+                    <li><strong>Prvi poskus ponovne vključitve:</strong> Cveto Vovk doda Tricka nazaj, Mia pa ga nemudoma ponovno odstrani.</li>
+                    <li><strong>Drugi poskus in povračilni ukrep:</strong> Cveto še enkrat doda Tricka. Tokrat Mia iz skupine odstrani Cveta.</li>
+                    <li><strong>Trickova vrnitev:</strong> Trick doda Cveta nazaj v skupino. Cveto nato takoj odstrani Mio — prvi uspešen povračilni ukrep njegove strani.</li>
+                    <li><strong>Posredovanje zaveznikov:</strong> Andjica se pridruži dogajanju, ponovno doda Mio in s seboj pripelje še enega, v arhivu neidentificiranega člana.</li>
+                    <li><strong>Končno čiščenje:</strong> Ko Cveto prejme obvestilo o novi vključitvi, hitro ukrepa in iz skupine odstrani vse tri: Mio, Andjico in neznanega člana.</li>
+                    <li><strong>Zaključek:</strong> Po zadnjih odstranitvah se konflikt umiri. Po pripovedi udeleženca nihče ni opazil končnega razpleta, skupina pa je ostala mirna — vsaj za tisti trenutek.</li>
+                </ol>
+            </section>
+
+            <section class="article-section" id="kronologija">
+                <h2>Kronologija</h2>
+                <p class="muted">Natančne ure in datum niso znani; spodnji vrstni red temelji na opisu dogodkov.</p>
+                <ol>
+                    <li>Trick Williams in Mia se spreta.</li>
+                    <li>Mia odstrani Tricka iz skupine.</li>
+                    <li>Cveto doda Tricka nazaj; Mia ga znova odstrani.</li>
+                    <li>Cveto ponovno doda Tricka; Mia odstrani Cveta.</li>
+                    <li>Trick doda Cveta nazaj.</li>
+                    <li>Cveto odstrani Mio.</li>
+                    <li>Andjica doda Mio in neznanega člana.</li>
+                    <li>Cveto odstrani Mio, Andjico in neznanega člana.</li>
+                    <li>Konflikt se konča, Trick pa zmago proslavi z nalepkami Stewieja Griffina.</li>
+                </ol>
+            </section>
+
+            <section class="article-section" id="izid">
+                <h2>Izid in posledice</h2>
+                <p>Končni izid se v neuradni zgodovini HBK is legend šteje kot zmaga Tricka Williamsa in Cveta Vovka. Odločilno ni bilo zgolj to, da je bila Mia odstranjena, temveč tudi to, da je Cveto po njenem ponovnem prihodu odstranil vse tri člane nasprotne strani v enem zadnjem ukrepu.</p>
+                <p>Po koncu operacije je Trick Williams zmago proslavil z nalepkami Stewieja Griffina, na katerih je pisalo <em>»Victory is mine«</em> (»Zmaga je moja«). Ta trenutek je postal najbolj prepoznaven simbol celotnega dogodka: po precej zapletenem zaporedju dodajanj in odstranitev je bila uradna proslava izvedena z risanim dojenčkom in nekaj nalepkami.</p>
+                <div class="quote">
+                    <p>»Victory is mine.«</p>
+                    <small>— Trick Williams, slavnostna objava po koncu konflikta</small>
+                </div>
+            </section>
+
+            <section class="article-section" id="pomen">
+                <h2>Zgodovinski pomen</h2>
+                <p>Operacija Mia: Prva fronta je postala eden od ustanovnih zapisov arhiva HBK is legend. Pokazala je, da se lahko spletni spor v nekaj korakih spremeni v zapleteno zaporedje zavezništev, povračilnih ukrepov in ponovnih poskusov prevzema nadzora.</p>
+                <p>Dogodek je hkrati opozoril na posebno naravo skupinskih klepetov: moč v njih ni nujno odvisna od števila zaveznikov, temveč tudi od tega, kdo lahko izvede zadnjo potezo. V tem primeru je zadnjo potezo izvedel Cveto Vovk, medtem ko je Trick Williams poskrbel za zmagoslavno zaključno sliko.</p>
+                <p>Podrobnosti, ki niso bile potrjene — med njimi točen datum, vsebina prvotnega prepira in identiteta neznanega člana — ostajajo odprte za morebitne prihodnje dopolnitve arhiva.</p>
+            </section>
+
+            <section class="article-section" id="opombe">
+                <h2>Opombe</h2>
+                <ul>
+                    <li>»Vojna«, »fronta« in »operacija« so šaljivi zgodovinski izrazi za dogajanje v skupini Snapchat.</li>
+                    <li>Datumi in ure niso navedeni, ker niso bili posredovani.</li>
+                    <li>Član, ki ga je Andjica dodala skupaj z Mio, je v tem zapisu označen kot neznani član.</li>
+                </ul>
+                <div class="tags" aria-label="Oznake članka">
+                    <span class="tag">HBK is legend</span><span class="tag">Snapchat</span><span class="tag">Operacija Mia</span><span class="tag">Arhivski zapis</span>
+                </div>
+            </section>
+        </article>
+
+        <aside aria-label="Dodatne informacije">
+            <section class="sidebox">
+                <h2 class="box-title">Udeleženci</h2>
+                <div class="participant">
+                    <span class="role">Mijina stran · glavna udeleženka</span>
+                    <strong>Mia</strong>
+                    <p>Članica, ki je po prepiru prva odstranila Tricka iz skupine. Pozneje jo je Cveto odstranil v povračilnem ukrepu.</p>
+                </div>
+                <div class="participant">
+                    <span class="role">Mijina stran · zaveznica</span>
+                    <strong>Andjica</strong>
+                    <p>Posredovala je po Mijini odstranitvi in jo ponovno dodala v skupino, skupaj z neznanim članom.</p>
+                </div>
+                <div class="participant">
+                    <span class="role">Mijina stran · neidentificiran</span>
+                    <strong>Neznani član</strong>
+                    <p>Oseba, ki jo je Andjica pripeljala v skupino. Njena identiteta in vloga zunaj tega dogodka nista znani.</p>
+                </div>
+                <div class="participant">
+                    <span class="role">Trickova stran · prvotni udeleženec</span>
+                    <strong>Trick Williams</strong>
+                    <p>Udeleženec prvotnega prepira. Po koncu konflikta je zmago proslavil z nalepkami Stewieja Griffina.</p>
+                </div>
+                <div class="participant">
+                    <span class="role">Trickova stran · zaveznik</span>
+                    <strong>Cveto Vovk</strong>
+                    <p>Večkrat je poskusil vrniti Tricka v skupino, nato pa izvedel končno odstranitev vseh treh članov nasprotne strani.</p>
+                </div>
+            </section>
+
+            <section class="sidebox">
+                <h2 class="box-title">Časovnica na kratko</h2>
+                <ol class="timeline">
+                    <li data-step="1"><strong>Začetni prepir</strong><span>Trick Williams in Mia</span></li>
+                    <li data-step="2"><strong>Prva odstranitev</strong><span>Mia odstrani Tricka</span></li>
+                    <li data-step="3"><strong>Poskusa vrnitve</strong><span>Cveto dvakrat doda Tricka</span></li>
+                    <li data-step="4"><strong>Sprememba tarče</strong><span>Mia odstrani Cveta</span></li>
+                    <li data-step="5"><strong>Protinapad</strong><span>Trick vrne Cveta; Cveto odstrani Mio</span></li>
+                    <li data-step="6"><strong>Okrepitev</strong><span>Andjica doda Mio in neznanega člana</span></li>
+                    <li data-step="7"><strong>Končna poteza</strong><span>Cveto odstrani vse tri</span></li>
+                    <li data-step="✓"><strong>Konec konflikta</strong><span>Stewiejeve nalepke razglasijo zmago</span></li>
+                </ol>
+            </section>
+
+            <section class="sidebox">
+                <h2 class="box-title">Povezani članki</h2>
+                <div class="related">
+                    <a href="index.html">Uradni arhiv HBK is legend</a>
+                    <a href="about.html">O skupini</a>
+                    <a href="final-war.html">Operacija Končni udarec</a>
+                    <a href="index.html#kazalo">Kazalo vseh poglavij</a>
+                </div>
+            </section>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span>HBK is legend · Uradni arhiv · 2026</span>
+        <span>Neuradni projekt za dokumentiranje zgodovine skupine.</span>
+    </div>
+</footer>
+</body>
+</html>
